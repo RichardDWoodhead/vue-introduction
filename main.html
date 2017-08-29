@@ -2,11 +2,21 @@
 <html>
 <head>
 	<title></title>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
+
 </head>
 <body>
 
+
 	<div id="app">
-		<p>{{ message }}</p>
+		<p class="title">vue introduction</p>
+		<input class="input" type="text" placeholder="first name" v-model="firstName">
+		<input class="input" type="text" placeholder="last name" v-model="lastName">
+		<p style="display: inline;">nafnið þitt er:</p>
+		<p v-text="firstName" style="display: inline;"></p>
+		<p v-text="lastName" style="display: inline;"></p>
 	</div>
 
 
@@ -17,7 +27,8 @@
 		var app = new Vue({
 			el: "#app",
 			data: {
-				message:"hello world!"
+				firstName:"",
+				lastName:""
 			}
 		})
 
